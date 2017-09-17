@@ -1,0 +1,4 @@
+---
+# handlers file for dev-server
+- name: restart sshd
+  service: name=sshd state=reloaded

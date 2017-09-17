@@ -1,0 +1,6 @@
+---
+#- name: Configure pubkeys for users
+- name: Configure pubkeys for users
+  authorized_key: key="{{ lookup('file', lookup('first_found', dict(files=['pubkeys/' + item.username + '.keys', '/dev/null'], skip=true)))}}" user="{{item.username}}"
+  with_items:
+      - "{{userlist}}"

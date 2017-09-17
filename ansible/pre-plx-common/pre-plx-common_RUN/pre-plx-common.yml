@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: ansibleitamdevops
+  become: true
+  become-method: sudo 
+  become_user: root
+  roles:
+    - pre-plx-common

@@ -1,0 +1,13 @@
+- hosts: all
+  remote_user: ansibleitamdevops
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+  tasks:
+  - template:
+      src: templates/dump_variables
+      dest: /tmp/ansible_variables
+  - fetch:
+      src: /tmp/ansible_variables
+      dest: "{{inventory_hostname}}_ansible_variables"

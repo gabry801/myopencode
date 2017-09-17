@@ -1,0 +1,7 @@
+---
+# tasks file for polluxcam
+
+- name: 'Install Pollux-Cam pkgs'
+  yum: name=pollux-cam.noarch state=present
+
+# Add other (eventual) steps

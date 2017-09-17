@@ -1,0 +1,11 @@
+---
+# tasks file for pollux-rpd
+#- name: 'Install correct xerces version '
+#  command: yum --disablerepo="*" --enablerepo="pollux-prod-rpd-noarch" install xerces-c
+#    register: myxerces
+#- debug: msg="{{myxerces.stdout}}"
+- name: 'Install Pollux RPD'
+  yum: name=pollux-rpd state=present 
+
+#- name: 'Install required python modules using PIP'
+

@@ -1,0 +1,17 @@
+---
+- name: "Install common pkgs for development"
+  yum: state=present name={{ item }}
+  with_items:
+    - apr-util
+    - gcc
+    - gcc-c++
+    - boost
+    - boost-devel
+    - boost-doc
+    - cryptopp
+    - cryptopp-devel
+    - cryptopp-progs
+    - uuid
+    - uuid-c++
+    - uuid-c++-devel
+    - uuid-devel

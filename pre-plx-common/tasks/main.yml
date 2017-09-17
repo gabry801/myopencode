@@ -1,0 +1,51 @@
+---
+# tasks file for pre-plx-common
+- name: 'Install EPEL repo if CentOS 6/7'
+  yum: name=epel-release state=latest
+  when: ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7'
+
+- name: 'Enable Extras/Optional repo if RHEL 7'
+  command: subscription-manager repos --enable={{ item }}
+  with_items:
+    - rhel-7-server-extras-rpms
+    - rhel-7-server-optional-rpms
+  when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7'
+
+- name: 'Install common pkgs across all applications'
+  yum: name={{ item }} state=latest
+  with_items:
+    - vim
+    - ntp
+    - net-tools
+    - sysstat
+    - rsync
+    - strace
+    - screen
+    - yum-utils
+    - redhat-lsb
+    - lsof
+    - lftp
+    - procmail
+    - mutt
+    - bzip2
+    - zip
+    - telnet
+
+- name: "Copy over Pollux general repo file"
+  copy: src=pollux-prod.repo dest=/etc/yum.repos.d/pollux-prod.repo owner=root group=root mode=0644 backup=yes  
+
+- name: "Set reboot on kernel panic"
+  copy: src=reboot-on-panic.conf dest=/etc/sysctl.d/reboot-on-panic.conf owner=root group=root mode=644 backup=yes
+
+- name: " Reload kernel runtime parameter"
+  command: /usr/sbin/sysctl -p /etc/sysctl.d/reboot-on-panic.conf
+
+- name: "Disable Selinux"
+  selinux:
+    state: disabled
+- command: /usr/sbin/setenforce 0
+  ignore_errors: yes
+
+- name: 'Disable firewalld if enabled'
+  service: name=firewalld state=stopped enabled=False
+

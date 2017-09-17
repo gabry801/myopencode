@@ -1,0 +1,19 @@
+---
+- name: Ensure that libpwquality is installed
+  tags: pam_pwquality
+  yum:
+    name: libpwquality
+    state: present
+    update_cache: yes
+  register: pam_pwquality_yum
+
+- name: Apply pam_pwquality configuration
+  tags: pam_pwquality
+  template:
+    src: pwquality.conf.j2
+    dest: /etc/security/pwquality.conf
+    owner: root
+    group: root
+    mode: 0644
+  when: pam_pwquality_yum|success
+...

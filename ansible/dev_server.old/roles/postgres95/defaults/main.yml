@@ -1,0 +1,7 @@
+---
+pgdg_repo_rpm_url: "https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-redhat95-9.5-2.noarch.rpm"
+pg_data_dir: "/var/lib/pgsql/9.5/data"
+pg_backups_dir: "/var/lib/pgsql/9.5/backups"
+pg_backups_dir_owner: "root"
+pg_backups_dir_group: "postgres"
+pg_backups_dir_mode: "0700"

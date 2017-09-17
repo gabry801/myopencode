@@ -1,0 +1,4 @@
+---
+rhel_pgdg_repo_rpm_url: "https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-redhat95-9.5-3.noarch.rpm"
+centos_pgdg_repo_rpm_url: "https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-3.noarch.rpm"
+pg_data_dir: "/data"

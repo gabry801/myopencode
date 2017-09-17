@@ -1,0 +1,7 @@
+---
+linuxgroups:
+  - groupname: prod
+    gid: 501
+  
+  - groupname: postgres
+    gid: 26

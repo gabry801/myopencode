@@ -1,0 +1,42 @@
+---
+# tasks file for test-user
+- name: 'Creating PROD group'
+  group: name=prod state=present
+
+- name: 'Create users records'
+  user:
+    name: "{{ item.value.lanid }}"
+    comment: "{{ item.value.name }}"
+    password: "{{ user_password }}"
+    group: prod
+    generate_ssh_key: yes
+  with_dict: "{{ appdev_users }}"
+  when: "item.value.active == 'Y'" 
+  
+- authorized_key: 
+    user: "{{ item.value.lanid }}" 
+    state: present
+    key: " {{ lookup('file', lookup('first_found', dict(files=['appdev/' + '{{ item.value.keyfile }}' , '/dev/null'], skip=true)))}} "
+  with_dict: "{{ appdev_users }}"
+  when: "item.value.active == 'Y'" 
+  ignore_errors: yes
+
+- name: 'Configuring sudo access'
+  user:
+    name: "{{ item.value.lanid }}"
+    groups: itamdevops
+    append: yes
+  with_dict: "{{ appdev_users }}"
+  when: "item.value.sudo == 'Y'"
+
+- name: 'Disabling inactive users'
+  shell: |
+    usermod -L -e 1 {{ item.value.lanid }}
+    rm -rf ~{{ item.value.lanid }}/.ssh/authorized_keys
+  with_dict: "{{ appdev_users }}"
+  when: "item.value.active == 'N'"
+
+- name: 'Checking users to re-enable'
+  command: chage -E -1 {{ item.value.lanid }}
+  with_dict: "{{ appdev_users }}"
+  when: "item.value.active == 'Y'"

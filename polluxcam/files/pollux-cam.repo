@@ -1,0 +1,27 @@
+# Pollux repositories
+[pollux-prod-cam-noarch]
+name=Pollux CAM Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=cam&releasever=2.4&basearch=noarch
+#baseurl=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/yum/pollux-ci7/cam/5.0/noarch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=1
+
+[pollux-prod-webcommon-noarch]
+name=Pollux WebCommon Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=webcommon&releasever=0.0&basearch=noarch
+#baseurl=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/yum/pollux-ci7/webcommon/0.0/noarch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=1
+
+[pollux-prod-rhel-$basearch]
+name=Pollux Packages for RHEL $releasever - $basearch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=rhel&releasever=$releasever.0&basearch=$basearch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=1
+

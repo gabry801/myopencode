@@ -1,0 +1,58 @@
+---
+# tasks file for pollux-server-7_0
+- name: 'Install correct xerces version '
+  copy: src=xerces-c-2.7.0-9.1.x86_64.rpm dest=/tmp/xerces-c-2.7.0-9.1.x86_64.rpm 
+
+- yum: name=/tmp/xerces-c-2.7.0-9.1.x86_64.rpm state=present
+
+- name: 'Install Pollux-Server pkgs'
+  yum: state=latest name={{ item }}
+  with_items:
+    - pollux-server
+
+- name: 'Installing Firebird ver 2.1.7'
+  copy: src=firebird-2.1.7.x86_64.tar dest=/opt owner=root group=root   
+- unarchive: src=firebird-2.1.7.x86_64.tar dest=/opt owner=firebird group=firebird
+
+- name: 'Define Firebird/xinetd file for Pollux-Server_6.6'
+  copy: src=firebird dest=/etc/xinetd.d/firebird owner=root group=root mode=644 backup=yes
+
+- name: 'Enable and start ntpd/xinetd/proftpd/rpcbind'
+  command: systemctl enable {{ item }}
+  with_items:
+    - ntpd.service
+    - xinetd.service
+    - proftpd.service
+- command: systemctl start {{ item }}
+  with_items:
+    - ntpd.service
+    - xinetd.service
+    - proftpd.service
+- command: systemctl add-wants multi-user rpcbind.service
+
+- name: 'Change ownership to Firebird installation'
+#  file: path=/opt/firebird-2.1.7.x86_64 owner=firebird group=firebird mode=0755
+  file: src=/opt/firebird-2.1.7.x86_64 dest=/opt/firebird owner=firebird group=firebird state=link
+- file: path=/opt/firebird-2.1.7.x86_64.tar state=absent
+
+- name: 'Link Firebird libs'
+  file: src=/opt/firebird/lib/libfbclient.so.2.1.7 dest={{ item }} state=link
+  with_items:
+    - /usr/lib64/libfbclient.so
+    - /usr/lib64/libfbclient.so.2
+    - /usr/lib64/libfbclient.so.2.1.7
+    - /usr/lib64/libfbembed.so.2.1
+    - /usr/lib64/libgds.so.0
+#  notify: restart pollux-server
+
+- name: 'Modify proftd configuration'
+  lineinfile:
+    destfile: /etc/proftpd.conf
+    regexp: '^DefaultRoot'
+    line: 'DefaultRoot			/'
+    backrefs: yes
+  notify: restart proftpd
+
+# Add other (eventual) steps
+- name: "Create .plxusers"
+  copy: src=.plxusrs dest=/pollux/Releases/.plxusrs owner=producer group=prod mode=660

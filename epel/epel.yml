@@ -1,0 +1,12 @@
+--- 
+- name: "Install EPEL repos  on server "
+  hosts: all
+  remote_user: root
+#  remote_user: ec2-user
+  become_method: sudo
+  become_user: root
+  vars:
+    ansible_distribution_major_version: "7"  
+ 
+  roles:
+    - role: EPEL

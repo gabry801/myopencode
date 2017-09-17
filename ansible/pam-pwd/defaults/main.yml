@@ -1,0 +1,12 @@
+---
+pam_pwquality_dcredit: 1
+pam_pwquality_difok: 3
+pam_pwquality_gecoscheck: 0
+pam_pwquality_lcredit: 1
+pam_pwquality_maxrepeat: 0
+pam_pwquality_maxclassrepeat: 0
+pam_pwquality_minclass: 0
+pam_pwquality_minlen: 9
+pam_pwquality_ocredit: 1
+pam_pwquality_ucredit: 1
+...

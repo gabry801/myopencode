@@ -1,0 +1,9 @@
+---
+# vars file for test-user
+user_password:
+  - $1$xyz$t4zn/Gf56Cb/8m8WtTkYA0
+
+userlist:
+  - username: guagga01
+  - username: chiniy01
+  - username: bianni99

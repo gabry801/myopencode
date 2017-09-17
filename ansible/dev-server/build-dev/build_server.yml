@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: ansibleitamdevops
+  become: true
+#  remote_user: ec2-user
+  become_method: sudo
+  become_user: root
+  
+  roles:
+    - dev-server
+    - postgres95-client

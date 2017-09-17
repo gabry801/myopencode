@@ -1,0 +1,14 @@
+---
+- name: 'Include only files matching country.yml'
+  include_vars:
+    dir: 'vars'
+    files_matching: "{{ country }}.yml"
+
+- name: 'Copy over files to dinamically generate '
+  copy: src=duply_plx_bkp.py dest=/etc/duply/duply_plx_bkp.py owner=root group=root mode="u+rw,g-wx,o-rwx"
+- debug:
+    #msg: "System {{ ansible_hostname }} name "
+    msg: "System {{ role_path }}/files/{{ country_code }}/{{ ansible_hostname }}-duply_plx_bkp_config.py  name "
+
+- name: 'Copy files'
+  copy: src="{{ role_path }}/files/{{ country_code }}/{{ ansible_hostname }}-duply_plx_bkp_config.py" dest="/etc/duply/{{ ansible_hostname }}-duply_plx_bkp_config.py" owner=root group=root mode="u+rw,g-wx,o-rwx"

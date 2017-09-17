@@ -1,0 +1,14 @@
+--- 
+- name: "Install POLLUX-CAM on server "
+  hosts: all
+  remote_user: ansibleitamdevops
+  become: true
+#  remote_user: ec2-user
+  become_method: sudo
+  become_user: root
+ 
+  roles:
+    - pre-plx-common
+    - jvm-oracle
+    - postgres95-client 
+    - polluxcam

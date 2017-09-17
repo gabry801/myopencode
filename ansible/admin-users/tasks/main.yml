@@ -1,0 +1,66 @@
+---
+# tasks file for test-user
+- include: check_users.yml
+
+#- name: 'Creating DEVOPS group'
+#  group: name=itamdevops state=present
+#
+#- name: 'Creating PROD group'
+#  group: name=prod state=present
+#
+#- name: 'Creating sudoers configuration file'
+#  template:
+#    src: devops_users.j2
+#    dest: /etc/sudoers.d/devops_users
+#    owner: root
+#    group: root
+#    mode: 0440
+#  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7') or
+#        (ansible_distribution == 'Red Hat Enterprise Linux' and ansible_distribution_major_version == '7')
+#
+#- name: 'Configuring sudo access'
+#  lineinfile:
+#    path: /etc/sudoers
+#    line: '%itamdevops ALL=(ALL) NOPASSWD: ALL'
+#  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '5') or
+#        (ansible_distribution == 'Red Hat Enterprise Linux' and ansible_distribution_major_version == '5')
+#
+#- name: 'Create users records'
+#  user:
+#    name: "{{ item.value.lanid }}"
+#    comment: "{{ item.value.name }}"
+#    #password: "{{ item.value.passhash }}"
+#    password: "{{ user_password }}"
+#    update_password: on_create
+#    groups: itamdevops,prod
+#  with_dict: "{{ devops_users }}"
+#  when: "item.value.active == 'Y'" 
+#
+#- name: 'Set password 40days expiration'
+#  command: /usr/bin/chage -M 40 "{{ item.value.lanid }}"
+#  with_dict: "{{ devops_users }}"
+#  when: "item.value.active == 'Y'"
+#
+#- name: 'Set authorized key'
+#  authorized_key:
+#    user: "{{ item.value.lanid }}"
+#    state: present
+#    key: " {{ lookup('file', lookup('first_found', dict(files=['devops/' + '{{ item.value.keyfile }}' , '/dev/null'], skip=true)))}} "
+#  with_dict: "{{ devops_users }}"
+#  when: "item.value.active == 'Y'"
+#  ignore_errors: yes
+#
+#- name: 'Disabling inactive users'
+#  shell: |
+#    usermod -L -e 1 {{ item.value.lanid }}
+#    rm -rf ~{{ item.value.lanid }}/.ssh/authorized_keys
+#  with_dict: "{{ devops_users }}"
+#  when: "item.value.active == 'N'"
+#
+#- name: 'Checking users to re-enable'
+#  command: chage -E -1 {{ item.value.lanid }}
+#  with_dict: "{{ devops_users }}"
+#  when: "item.value.active == 'Y'"
+#
+#- include: appdev.yml
+#  when: define_appdev == 'Y'

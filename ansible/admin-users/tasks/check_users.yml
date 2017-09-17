@@ -1,0 +1,15 @@
+---
+- name: 'List users who has default password'
+  #shell: grep  {{ user_password }}  /etc/shadow | cut -d':' -f1
+  shell: grep dummy  /etc/shadow | cut -d':' -f1
+  register: users_with_def_passwd
+
+- debug: var=users_with_def_passwd.stdout_lines
+
+- name: 'Force user with default password to change password at next login'
+  #script: python pw_ge {{ item.value.email }} {{ ansible_hostname }} 
+  local_action: command {{role_path}}/scripts/pw_generator.py gabriele.guaglianone@gmail.com {{ ansible_hostname }}
+  #command: chage -d 0 {{ item }}
+  #script: python pw_ge {{ item }} {{ ansible_hostname }} 
+  with_items: "{{ users_with_def_passwd.stdout_lines }}"
+ # ignore_errors: yes

@@ -1,0 +1,61 @@
+---
+#### Install Zabbix Agent 3.2.x
+- name: "Stop old zabbix service if running and delete old pkg"
+  service: name=zabbix-agent state=stopped
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '5') or
+        (ansible_distribution == 'RedHat' and ansible_distribution_major_version == '5')
+  ignore_errors: yes
+
+- yum: 
+    name: zabbix-agent-nlsn 
+    state: absent
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '5') or
+        (ansible_distribution == 'RedHat' and ansible_distribution_major_version == '5')
+
+- name: 'Installng Zabbix repo'
+  copy: src=zabbix-release-3.2-1.el5.noarch.rpm dest=/tmp/zabbix-release-3.2-1.el5.noarch.rpm owner=root group=root mode=0644
+- yum: name=/tmp/zabbix-release-3.2-1.el5.noarch.rpm state=present disable_gpg_check=yes 
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '5') or
+        (ansible_distribution == 'RedHat' and ansible_distribution_major_version == '5')
+
+- name: 'Import signature for to avoid errors on installation'
+  command: "{{item}}"
+  with_items:
+    - rpm -e gpg-pubkey-a14fe591-578876fd
+    - rpm --import http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591-EL5
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '5') or
+        (ansible_distribution == 'RedHat' and ansible_distribution_major_version == '5')
+ 
+- name: 'Installng Zabbix repo'
+  copy: src=zabbix-release-3.2-1.el7.noarch.rpm dest=/tmp/zabbix-release-3.2-1.el7.noarch.rpm owner=root group=root mode=0644
+- yum: name=/tmp/zabbix-release-3.2-1.el7.noarch.rpm state=present disable_gpg_check=yes 
+  when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7') or
+        (ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7')
+
+- name: 'Install agent and sender'
+  yum: name={{ item }} state=latest
+  with_items:
+    - zabbix-agent
+    - zabbix-sender
+
+# tasks file for zabbix-agent
+- name: 'Configuring Zabbix Agent on target machine'
+  lineinfile:
+    dest: /etc/zabbix/zabbix_agentd.conf
+    regexp: '^Server='
+    line: 'Server=appmonitoring.nielsen.com'
+    backrefs: yes
+
+- lineinfile: 
+    dest: /etc/zabbix/zabbix_agentd.conf 
+    regexp: '^ServerActive=' 
+    line: 'ServerActive=appmonitoring.nielsen.com' 
+    backrefs: yes
+
+- lineinfile: 
+    dest: /etc/zabbix/zabbix_agentd.conf 
+    regexp: '^Hostname=' 
+    line: 'Hostname={{ zabbix_hostname }}' 
+    backrefs: yes
+- copy: src=agent_parameters.txt dest=/etc/zabbix/zabbix_agentd.d/userparameter_nlsn.conf owner=zabbix group=zabbix mode=0644
+  notify: start zabbix-agent

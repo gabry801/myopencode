@@ -1,0 +1,14 @@
+---
+# tasks file for postgres95-client
+- name: "Enable PostgreSQL 9.5 from PGDG"
+  yum:
+    name: "{{ pgdg_repo_rpm_url }}"
+    state: present
+
+- name: "Install PostgreSQL client packages"
+  yum: name={{ item }} state=present
+  with_items:
+    - postgresql95
+    - postgresql95-libs
+    - postgresql95-devel
+

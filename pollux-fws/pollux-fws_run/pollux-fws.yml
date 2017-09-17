@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: ansibleitamdevops
+  become: true
+  become_method: sudo
+  become_user: root
+  roles:
+    - pre-plx-common
+    - jvm-oracle
+    - pollux-fws

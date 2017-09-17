@@ -1,0 +1,55 @@
+# Pollux repositories
+
+[pollux-prod-server-noarch]
+name=Pollux Server Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=server&releasever=6.6&basearch=noarch
+failovermethod=priority
+gpgcheck=0
+enabled=1
+
+[pollux-prod-rpd-noarch]
+name=Pollux Server Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=rpd&releasever=4.0&basearch=x86_64
+failovermethod=priority
+gpgcheck=0
+enabled=1
+
+[pollux-prod-cam-noarch]
+name=Pollux CAM Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=cam&releasever=2.4&basearch=noarch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=0
+
+[pollux-prod-webcommon-noarch]
+name=Pollux WebCommon Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=webcommon&releasever=0.0&basearch=noarch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=0
+
+[pollux-prod-fts-$basearch]
+name=Pollux FTS Packages - $basearch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=fts&releasever=3.0&basearch=$basearch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=0
+
+[pollux-prod-fws-noarch]
+name=Pollux FWS Packages - noarch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=fws&releasever=5.3&basearch=noarch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=0
+
+[pollux-prod-rhel-$basearch]
+name=Pollux Packages for RHEL $releasever - $basearch
+mirrorlist=http://pollux:JTXBSTIMFIE1k@rpm.agbnielsen.com/cgi-bin/mirrorlist?branch=pollux-prod-7&distro=rhel&prod=rhel&releasever=$releasever.0&basearch=$basearch
+failovermethod=priority
+gpgcheck=0
+metadata_expire=0
+enabled=0

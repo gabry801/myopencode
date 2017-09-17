@@ -1,0 +1,5 @@
+---
+- include_vars: linuxgroups.yml
+- name: Create groups for Developers
+  group: name={{ item.groupname }} gid={{ item.gid }} state=present
+  with_items: '{{linuxgroups}}'

@@ -1,0 +1,2674 @@
+HOSTVARS (ANSIBLE GATHERED, group_vars, host_vars) :
+
+ansible_all_ipv4_addresses: [10.90.82.150, 10.90.24.168]
+ansible_all_ipv6_addresses: []
+ansible_apparmor: {status: disabled}
+ansible_architecture: x86_64
+ansible_bios_date: 04/14/2014
+ansible_bios_version: '6.00'
+ansible_check_mode: false
+ansible_cmdline: {crashkernel: auto, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+  iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+  iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+  time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+  weeknumber: '28', year: '2017'}
+ansible_default_ipv4: {address: 10.90.24.168, alias: eth0, broadcast: 10.90.24.255,
+  gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:32:09', mtu: 1500,
+  netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+ansible_default_ipv6: {}
+ansible_devices:
+  fd0:
+    holders: []
+    host: ''
+    model: null
+    partitions: {}
+    removable: '1'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '8'
+    sectorsize: 512
+    size: 4.00 KB
+    support_discard: null
+    vendor: null
+  hdc:
+    holders: []
+    host: ''
+    model: null
+    partitions: {}
+    removable: '1'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '8388604'
+    sectorsize: 512
+    size: 4.00 GB
+    support_discard: null
+    vendor: null
+  sda:
+    holders: []
+    host: ''
+    model: Virtual disk
+    partitions:
+      sda1:
+        holders: []
+        sectors: '1028097'
+        sectorsize: 512
+        size: 502.00 MB
+        start: '63'
+        uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+      sda2:
+        holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+        sectors: '103828095'
+        sectorsize: 512
+        size: 49.51 GB
+        start: '1028160'
+        uuid: null
+    removable: '0'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '104857600'
+    sectorsize: 512
+    size: 50.00 GB
+    support_discard: null
+    vendor: VMware
+  sdb:
+    holders: [dm-8]
+    host: ''
+    model: Virtual disk
+    partitions: {}
+    removable: '0'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '104857600'
+    sectorsize: 512
+    size: 50.00 GB
+    support_discard: null
+    vendor: VMware
+ansible_distribution: RedHat
+ansible_distribution_major_version: '5'
+ansible_distribution_release: Tikanga
+ansible_distribution_version: '5.10'
+ansible_dns:
+  nameservers: [10.90.40.11, 10.90.40.12]
+  search: [enterprisenet.org]
+ansible_domain: enterprisenet.org
+ansible_effective_group_id: 0
+ansible_effective_user_id: 0
+ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+  PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+  SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-udbfqxkllaqavgvgemttckdizobzvpxc; /usr/bin/python
+    /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/setup.py;
+    rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/"
+    > /dev/null 2>&1, SUDO_GID: '25874', SUDO_UID: '25874', SUDO_USER: ansibleitamdevops,
+  TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+ansible_eth0:
+  active: true
+  device: eth0
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on', tx_checksumming: 'on',
+    udp fragmentation offload: 'off'}
+  ipv4: {address: 10.90.24.168, broadcast: 10.90.24.255, netmask: 255.255.255.0, network: 10.90.24.0}
+  macaddress: 00:50:56:b2:32:09
+  module: vmxnet3
+  mtu: 1500
+  pciid: '0000:03:00.0'
+  promisc: false
+  speed: 10000
+  type: ether
+ansible_eth1:
+  active: true
+  device: eth1
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on', tx_checksumming: 'on',
+    udp fragmentation offload: 'off'}
+  ipv4: {address: 10.90.82.150, broadcast: 10.90.95.255, netmask: 255.255.240.0, network: 10.90.80.0}
+  macaddress: 00:50:56:b2:60:2a
+  module: vmxnet3
+  mtu: 1500
+  pciid: 0000:0b:00.0
+  promisc: false
+  speed: 10000
+  type: ether
+ansible_fips: false
+ansible_form_factor: Other
+ansible_fqdn: lhrrhetamp003.enterprisenet.org
+ansible_gather_subset: [hardware, virtual, network]
+ansible_hostname: lhrrhetamp003
+ansible_interfaces: [lo, eth1, eth0]
+ansible_kernel: 2.6.18-371.el5
+ansible_lo:
+  active: true
+  device: lo
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+    tx_checksumming: 'off', udp fragmentation offload: 'off'}
+  ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+  mtu: 16436
+  promisc: false
+  type: loopback
+ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server release
+    5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+ansible_lvm:
+  lvs:
+    disk.vol: {size_g: '50.00', vg: datavg}
+    home.vol: {size_g: '2.00', vg: sysvg}
+    opt.vol: {size_g: '4.00', vg: sysvg}
+    root.vol: {size_g: '4.00', vg: sysvg}
+    swap.vol: {size_g: '4.00', vg: sysvg}
+    tmp.vol: {size_g: '4.00', vg: sysvg}
+    usr.vol: {size_g: '5.00', vg: sysvg}
+    var.vol: {size_g: '4.00', vg: sysvg}
+    varcrash.vol: {size_g: '10.00', vg: sysvg}
+  vgs:
+    datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '50.00'}
+    sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+ansible_machine: x86_64
+ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+ansible_memfree_mb: 106
+ansible_memory_mb:
+  nocache: {free: 3233, used: 715}
+  real: {free: 106, total: 3948, used: 3842}
+  swap: {cached: 0, free: 4095, total: 4095, used: 0}
+ansible_memtotal_mb: 3948
+ansible_mounts:
+- {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326214144,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw, size_available: 3540848640,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw, size_available: 3339792384,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw, size_available: 1901379584,
+  size_total: 2080194560, uuid: N/A}
+- {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw, size_available: 1320042496,
+  size_total: 5200543744, uuid: N/A}
+- {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw, size_available: 3732025344,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445805568,
+  size_total: 509776896, uuid: N/A}
+- {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+  size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+- {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw, size_available: 49787572224,
+  size_total: 52840493056, uuid: N/A}
+ansible_nodename: lhrrhetamp003.enterprisenet.org
+ansible_os_family: RedHat
+ansible_pkg_mgr: yum
+ansible_playbook_python: /usr/bin/python2
+ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+  Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680
+    v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+ansible_processor_cores: 2
+ansible_processor_count: 2
+ansible_processor_threads_per_core: 1
+ansible_processor_vcpus: 4
+ansible_product_name: VMware Virtual Platform
+ansible_product_serial: VMware-42 32 7d 0f 9a ec 98 8c-32 92 f6 23 2d 30 33 b0
+ansible_product_uuid: 42327D0F-9AEC-988C-3292-F6232D3033B0
+ansible_product_version: None
+ansible_python:
+  executable: /usr/bin/python
+  has_sslcontext: false
+  type: null
+  version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+  version_info: [2, 4, 3, final, 0]
+ansible_python_version: 2.4.3
+ansible_real_group_id: 0
+ansible_real_user_id: 0
+ansible_selinux: {status: disabled}
+ansible_service_mgr: sysvinit
+ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+ansible_swapfree_mb: 4095
+ansible_swaptotal_mb: 4095
+ansible_system: Linux
+ansible_system_vendor: VMware, Inc.
+ansible_uptime_seconds: 2976202
+ansible_user_dir: /root
+ansible_user_gecos: root
+ansible_user_gid: 0
+ansible_user_id: root
+ansible_user_shell: /bin/bash
+ansible_user_uid: 0
+ansible_userspace_architecture: x86_64
+ansible_userspace_bits: '64'
+ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+ansible_virtualization_role: NA
+ansible_virtualization_type: NA
+group_names: [croatia]
+groups:
+  all: [10.7.134.19, 10.7.134.20, 10.7.134.24, 10.7.134.25, 10.7.134.26, 10.7.134.21,
+    10.7.134.27, 10.7.134.28, 10.7.134.29, 10.7.134.30, 10.7.134.31, 10.7.134.49,
+    10.7.134.72, 10.7.134.73, 10.7.134.74, 10.7.134.75, 10.7.134.76, 10.7.134.106,
+    10.7.134.37, 10.7.134.38, 10.7.134.39, 10.7.134.40, 10.7.134.41, 10.7.134.55,
+    10.90.25.42, 10.90.25.53, 10.90.25.49, 10.90.25.50, 10.90.25.51, 10.90.25.56,
+    10.7.134.67, 10.7.134.68, 10.7.134.69, 10.7.134.70, 10.7.134.71, 10.7.134.105,
+    10.90.25.40, 10.90.25.43, 10.90.25.44, 10.90.25.45, 10.90.25.52, 10.90.25.55,
+    10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170, 10.90.24.171,
+    10.7.134.32, 10.7.134.33, 10.7.134.34, 10.7.134.35, 10.7.134.36, 10.7.134.52]
+  croatia: [10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170,
+    10.90.24.171]
+  macedonia: [10.7.134.67, 10.7.134.68, 10.7.134.69, 10.7.134.70, 10.7.134.71, 10.7.134.105]
+  mexico: [10.7.134.72, 10.7.134.73, 10.7.134.74, 10.7.134.75, 10.7.134.76, 10.7.134.106]
+  poland: [10.90.25.42, 10.90.25.53, 10.90.25.49, 10.90.25.50, 10.90.25.51, 10.90.25.56]
+  puertorico: [10.7.134.37, 10.7.134.38, 10.7.134.39, 10.7.134.40, 10.7.134.41, 10.7.134.55]
+  rep-dominican: [10.7.134.27, 10.7.134.28, 10.7.134.29, 10.7.134.30, 10.7.134.31,
+    10.7.134.49]
+  sweden: [10.90.25.40, 10.90.25.43, 10.90.25.44, 10.90.25.45, 10.90.25.52, 10.90.25.55]
+  ukraine: [10.7.134.19, 10.7.134.20, 10.7.134.24, 10.7.134.25, 10.7.134.26, 10.7.134.21]
+  ungrouped: []
+  venezuela: [10.7.134.32, 10.7.134.33, 10.7.134.34, 10.7.134.35, 10.7.134.36, 10.7.134.52]
+inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+inventory_hostname: 10.90.24.168
+inventory_hostname_short: '10'
+module_setup: true
+omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+
+
+PLAYBOOK VARS:
+
+ansible_all_ipv4_addresses: [10.90.82.150, 10.90.24.168]
+ansible_all_ipv6_addresses: []
+ansible_apparmor: {status: disabled}
+ansible_architecture: x86_64
+ansible_bios_date: 04/14/2014
+ansible_bios_version: '6.00'
+ansible_check_mode: false
+ansible_cmdline: {crashkernel: auto, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+  iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+  iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+  time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+  weeknumber: '28', year: '2017'}
+ansible_default_ipv4: {address: 10.90.24.168, alias: eth0, broadcast: 10.90.24.255,
+  gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:32:09', mtu: 1500,
+  netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+ansible_default_ipv6: {}
+ansible_devices:
+  fd0:
+    holders: []
+    host: ''
+    model: null
+    partitions: {}
+    removable: '1'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '8'
+    sectorsize: 512
+    size: 4.00 KB
+    support_discard: null
+    vendor: null
+  hdc:
+    holders: []
+    host: ''
+    model: null
+    partitions: {}
+    removable: '1'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '8388604'
+    sectorsize: 512
+    size: 4.00 GB
+    support_discard: null
+    vendor: null
+  sda:
+    holders: []
+    host: ''
+    model: Virtual disk
+    partitions:
+      sda1:
+        holders: []
+        sectors: '1028097'
+        sectorsize: 512
+        size: 502.00 MB
+        start: '63'
+        uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+      sda2:
+        holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+        sectors: '103828095'
+        sectorsize: 512
+        size: 49.51 GB
+        start: '1028160'
+        uuid: null
+    removable: '0'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '104857600'
+    sectorsize: 512
+    size: 50.00 GB
+    support_discard: null
+    vendor: VMware
+  sdb:
+    holders: [dm-8]
+    host: ''
+    model: Virtual disk
+    partitions: {}
+    removable: '0'
+    rotational: null
+    sas_address: null
+    sas_device_handle: null
+    scheduler_mode: cfq
+    sectors: '104857600'
+    sectorsize: 512
+    size: 50.00 GB
+    support_discard: null
+    vendor: VMware
+ansible_distribution: RedHat
+ansible_distribution_major_version: '5'
+ansible_distribution_release: Tikanga
+ansible_distribution_version: '5.10'
+ansible_dns:
+  nameservers: [10.90.40.11, 10.90.40.12]
+  search: [enterprisenet.org]
+ansible_domain: enterprisenet.org
+ansible_effective_group_id: 0
+ansible_effective_user_id: 0
+ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+  PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+  SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-udbfqxkllaqavgvgemttckdizobzvpxc; /usr/bin/python
+    /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/setup.py;
+    rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/"
+    > /dev/null 2>&1, SUDO_GID: '25874', SUDO_UID: '25874', SUDO_USER: ansibleitamdevops,
+  TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+ansible_eth0:
+  active: true
+  device: eth0
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on', tx_checksumming: 'on',
+    udp fragmentation offload: 'off'}
+  ipv4: {address: 10.90.24.168, broadcast: 10.90.24.255, netmask: 255.255.255.0, network: 10.90.24.0}
+  macaddress: 00:50:56:b2:32:09
+  module: vmxnet3
+  mtu: 1500
+  pciid: '0000:03:00.0'
+  promisc: false
+  speed: 10000
+  type: ether
+ansible_eth1:
+  active: true
+  device: eth1
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on', tx_checksumming: 'on',
+    udp fragmentation offload: 'off'}
+  ipv4: {address: 10.90.82.150, broadcast: 10.90.95.255, netmask: 255.255.240.0, network: 10.90.80.0}
+  macaddress: 00:50:56:b2:60:2a
+  module: vmxnet3
+  mtu: 1500
+  pciid: 0000:0b:00.0
+  promisc: false
+  speed: 10000
+  type: ether
+ansible_fips: false
+ansible_form_factor: Other
+ansible_fqdn: lhrrhetamp003.enterprisenet.org
+ansible_gather_subset: [hardware, virtual, network]
+ansible_hostname: lhrrhetamp003
+ansible_interfaces: [lo, eth1, eth0]
+ansible_kernel: 2.6.18-371.el5
+ansible_lo:
+  active: true
+  device: lo
+  features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+    rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+    tx_checksumming: 'off', udp fragmentation offload: 'off'}
+  ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+  mtu: 16436
+  promisc: false
+  type: loopback
+ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server release
+    5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+ansible_lvm:
+  lvs:
+    disk.vol: {size_g: '50.00', vg: datavg}
+    home.vol: {size_g: '2.00', vg: sysvg}
+    opt.vol: {size_g: '4.00', vg: sysvg}
+    root.vol: {size_g: '4.00', vg: sysvg}
+    swap.vol: {size_g: '4.00', vg: sysvg}
+    tmp.vol: {size_g: '4.00', vg: sysvg}
+    usr.vol: {size_g: '5.00', vg: sysvg}
+    var.vol: {size_g: '4.00', vg: sysvg}
+    varcrash.vol: {size_g: '10.00', vg: sysvg}
+  vgs:
+    datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '50.00'}
+    sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+ansible_machine: x86_64
+ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+ansible_memfree_mb: 106
+ansible_memory_mb:
+  nocache: {free: 3233, used: 715}
+  real: {free: 106, total: 3948, used: 3842}
+  swap: {cached: 0, free: 4095, total: 4095, used: 0}
+ansible_memtotal_mb: 3948
+ansible_mounts:
+- {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326214144,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw, size_available: 3540848640,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw, size_available: 3339792384,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw, size_available: 1901379584,
+  size_total: 2080194560, uuid: N/A}
+- {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw, size_available: 1320042496,
+  size_total: 5200543744, uuid: N/A}
+- {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw, size_available: 3732025344,
+  size_total: 4160421888, uuid: N/A}
+- {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445805568,
+  size_total: 509776896, uuid: N/A}
+- {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+  size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+- {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw, size_available: 49787572224,
+  size_total: 52840493056, uuid: N/A}
+ansible_nodename: lhrrhetamp003.enterprisenet.org
+ansible_os_family: RedHat
+ansible_pkg_mgr: yum
+ansible_play_batch: &id002 [10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169,
+  10.90.24.170, 10.90.24.171]
+ansible_play_hosts: [10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170,
+  10.90.24.171]
+ansible_play_hosts_all: [10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170,
+  10.90.24.171]
+ansible_playbook_python: /usr/bin/python2
+ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+  Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680
+    v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+ansible_processor_cores: 2
+ansible_processor_count: 2
+ansible_processor_threads_per_core: 1
+ansible_processor_vcpus: 4
+ansible_product_name: VMware Virtual Platform
+ansible_product_serial: VMware-42 32 7d 0f 9a ec 98 8c-32 92 f6 23 2d 30 33 b0
+ansible_product_uuid: 42327D0F-9AEC-988C-3292-F6232D3033B0
+ansible_product_version: None
+ansible_python:
+  executable: /usr/bin/python
+  has_sslcontext: false
+  type: null
+  version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+  version_info: [2, 4, 3, final, 0]
+ansible_python_version: 2.4.3
+ansible_real_group_id: 0
+ansible_real_user_id: 0
+ansible_selinux: {status: disabled}
+ansible_service_mgr: sysvinit
+ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+ansible_swapfree_mb: 4095
+ansible_swaptotal_mb: 4095
+ansible_system: Linux
+ansible_system_vendor: VMware, Inc.
+ansible_uptime_seconds: 2976202
+ansible_user_dir: /root
+ansible_user_gecos: root
+ansible_user_gid: 0
+ansible_user_id: root
+ansible_user_shell: /bin/bash
+ansible_user_uid: 0
+ansible_userspace_architecture: x86_64
+ansible_userspace_bits: '64'
+ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+ansible_virtualization_role: NA
+ansible_virtualization_type: NA
+environment: []
+group_names: [croatia]
+groups: &id001
+  all: [10.7.134.19, 10.7.134.20, 10.7.134.24, 10.7.134.25, 10.7.134.26, 10.7.134.21,
+    10.7.134.27, 10.7.134.28, 10.7.134.29, 10.7.134.30, 10.7.134.31, 10.7.134.49,
+    10.7.134.72, 10.7.134.73, 10.7.134.74, 10.7.134.75, 10.7.134.76, 10.7.134.106,
+    10.7.134.37, 10.7.134.38, 10.7.134.39, 10.7.134.40, 10.7.134.41, 10.7.134.55,
+    10.90.25.42, 10.90.25.53, 10.90.25.49, 10.90.25.50, 10.90.25.51, 10.90.25.56,
+    10.7.134.67, 10.7.134.68, 10.7.134.69, 10.7.134.70, 10.7.134.71, 10.7.134.105,
+    10.90.25.40, 10.90.25.43, 10.90.25.44, 10.90.25.45, 10.90.25.52, 10.90.25.55,
+    10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170, 10.90.24.171,
+    10.7.134.32, 10.7.134.33, 10.7.134.34, 10.7.134.35, 10.7.134.36, 10.7.134.52]
+  croatia: [10.90.24.166, 10.90.24.167, 10.90.24.168, 10.90.24.169, 10.90.24.170,
+    10.90.24.171]
+  macedonia: [10.7.134.67, 10.7.134.68, 10.7.134.69, 10.7.134.70, 10.7.134.71, 10.7.134.105]
+  mexico: [10.7.134.72, 10.7.134.73, 10.7.134.74, 10.7.134.75, 10.7.134.76, 10.7.134.106]
+  poland: [10.90.25.42, 10.90.25.53, 10.90.25.49, 10.90.25.50, 10.90.25.51, 10.90.25.56]
+  puertorico: [10.7.134.37, 10.7.134.38, 10.7.134.39, 10.7.134.40, 10.7.134.41, 10.7.134.55]
+  rep-dominican: [10.7.134.27, 10.7.134.28, 10.7.134.29, 10.7.134.30, 10.7.134.31,
+    10.7.134.49]
+  sweden: [10.90.25.40, 10.90.25.43, 10.90.25.44, 10.90.25.45, 10.90.25.52, 10.90.25.55]
+  ukraine: [10.7.134.19, 10.7.134.20, 10.7.134.24, 10.7.134.25, 10.7.134.26, 10.7.134.21]
+  ungrouped: []
+  venezuela: [10.7.134.32, 10.7.134.33, 10.7.134.34, 10.7.134.35, 10.7.134.36, 10.7.134.52]
+hostvars:
+  10.7.134.105:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.105
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.106:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.106
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.19:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.19
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.20:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.20
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.21:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.21
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.24:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.24
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.25:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.25
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.26:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [ukraine]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.26
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.27:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.27
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.28:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.28
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.29:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.29
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.30:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.30
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.31:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.31
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.32:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.32
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.33:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.33
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.34:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.34
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.35:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.35
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.36:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.36
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.37:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.37
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.38:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.38
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.39:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.39
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.40:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.40
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.41:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.41
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.49:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [rep-dominican]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.49
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.52:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [venezuela]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.52
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.55:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [puertorico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.55
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.67:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.67
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.68:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.68
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.69:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.69
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.70:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.70
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.71:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [macedonia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.71
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.72:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.72
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.73:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.73
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.74:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.74
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.75:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.75
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.7.134.76:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [mexico]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.7.134.76
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.166:
+    ansible_all_ipv4_addresses: [10.90.82.148, 10.90.24.166]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: auto, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+      iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+      iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+      time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.166, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:68:be', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-nfqajhzthkoawbkzyztrbdyruvuuqwrr;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-261582984197633/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-261582984197633/"
+        > /dev/null 2>&1, SUDO_GID: '26250', SUDO_UID: '26250', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.166, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:68:be
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.148, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:4c:62
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetamp001.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetamp001
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk.vol: {size_g: '50.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '5.00', vg: sysvg}
+        var.vol: {size_g: '4.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '50.00'}
+        sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 458
+    ansible_memory_mb:
+      nocache: {free: 1684, used: 2264}
+      real: {free: 458, total: 3948, used: 3490}
+      swap: {cached: 0, free: 4095, total: 4095, used: 0}
+    ansible_memtotal_mb: 3948
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326074880,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3543257088, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 3348840448, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 1892638720, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 1144213504, size_total: 5200543744, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3732025344, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445807616,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw,
+      size_available: 45392396288, size_total: 52840493056, uuid: N/A}
+    ansible_nodename: lhrrhetamp001.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 2
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 4
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-42 32 fa 69 71 15 54 73-b5 48 45 0b eb e4 d6 33
+    ansible_product_uuid: 4232FA69-7115-5473-B548-450BEBE4D633
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 4095
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 2976068
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.166
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.167:
+    ansible_all_ipv4_addresses: [10.90.82.149, 10.90.24.167]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: auto, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+      iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+      iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+      time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.167, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:78:b9', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-mviiwoazqqvpodibwbbeawocfcbytidm;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-150624304254197/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-150624304254197/"
+        > /dev/null 2>&1, SUDO_GID: '25873', SUDO_UID: '25873', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.167, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:78:b9
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.149, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:18:15
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetamp002.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetamp002
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk.vol: {size_g: '50.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '5.00', vg: sysvg}
+        var.vol: {size_g: '4.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '50.00'}
+        sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 103
+    ansible_memory_mb:
+      nocache: {free: 1820, used: 2128}
+      real: {free: 103, total: 3948, used: 3845}
+      swap: {cached: 0, free: 4095, total: 4095, used: 0}
+    ansible_memtotal_mb: 3948
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326070784,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3543257088, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 3205578752, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 1901346816, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 1158062080, size_total: 5200543744, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3732029440, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445805568,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw,
+      size_available: 46013939712, size_total: 52840493056, uuid: N/A}
+    ansible_nodename: lhrrhetamp002.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 2
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 4
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-42 32 f1 25 e9 5b 40 c8-7f e2 f7 3a 87 0e cc f8
+    ansible_product_uuid: 4232F125-E95B-40C8-7FE2-F73A870ECCF8
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 4095
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 2976203
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.167
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.168:
+    ansible_all_ipv4_addresses: [10.90.82.150, 10.90.24.168]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: auto, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+      iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+      iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+      time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.168, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:32:09', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-udbfqxkllaqavgvgemttckdizobzvpxc;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.56-148464244338600/"
+        > /dev/null 2>&1, SUDO_GID: '25874', SUDO_UID: '25874', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.168, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:32:09
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.150, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:60:2a
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetamp003.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetamp003
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk.vol: {size_g: '50.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '5.00', vg: sysvg}
+        var.vol: {size_g: '4.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '50.00'}
+        sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 106
+    ansible_memory_mb:
+      nocache: {free: 3233, used: 715}
+      real: {free: 106, total: 3948, used: 3842}
+      swap: {cached: 0, free: 4095, total: 4095, used: 0}
+    ansible_memtotal_mb: 3948
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326214144,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3540848640, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 3339792384, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 1901379584, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 1320042496, size_total: 5200543744, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3732025344, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445805568,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw,
+      size_available: 49787572224, size_total: 52840493056, uuid: N/A}
+    ansible_nodename: lhrrhetamp003.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 2
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 4
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-42 32 7d 0f 9a ec 98 8c-32 92 f6 23 2d 30 33 b0
+    ansible_product_uuid: 42327D0F-9AEC-988C-3292-F6232D3033B0
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 4095
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 2976202
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.168
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.169:
+    ansible_all_ipv4_addresses: [10.90.82.151, 10.90.24.169]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: auto, fastboot: true, quiet: true, rhgb: true,
+      ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+      iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+      iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+      time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.169, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:3c:59', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '1363148800'
+        sectorsize: 512
+        size: 650.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-nzjyibybizxwbkihbzeluaxuqwzcceoa;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-210171787639813/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-210171787639813/"
+        > /dev/null 2>&1, SUDO_GID: '25920', SUDO_UID: '25920', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.169, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:3c:59
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.151, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:71:10
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetamp004.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetamp004
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk.vol: {size_g: '650.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '5.00', vg: sysvg}
+        var.vol: {size_g: '4.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '650.00'}
+        sysvg: {free_g: '12.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 714
+    ansible_memory_mb:
+      nocache: {free: 3343, used: 4639}
+      real: {free: 714, total: 7982, used: 7268}
+      swap: {cached: 0, free: 4095, total: 4095, used: 0}
+    ansible_memtotal_mb: 7982
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3067752448,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3540848640, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 2476793856, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 1148891136, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 874008576, size_total: 5200543744, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3731877888, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445803520,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw,
+      size_available: 42839199744, size_total: 686977105920, uuid: N/A}
+    ansible_nodename: lhrrhetamp004.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 2
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 4
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-42 32 bc c9 db b6 3d 2d-9b 88 a6 82 1c c9 8f 86
+    ansible_product_uuid: 4232BCC9-DBB6-3D2D-9B88-A6821CC98F86
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 4095
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 550370
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.169
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.170:
+    ansible_all_ipv4_addresses: [10.90.82.152, 10.90.24.170]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: 128M@16M, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030097', hour: '13',
+      iso8601: '2017-07-14T11:01:37Z', iso8601_basic: 20170714T130137%f, iso8601_basic_short: 20170714T130137,
+      iso8601_micro: '2017-07-14T11:01:37.%fZ', minute: '01', month: '07', second: '37',
+      time: '13:01:37', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.170, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:1a:f6', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-9, dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '1468006400'
+        sectorsize: 512
+        size: 700.00 GB
+        support_discard: null
+        vendor: VMware
+      sdc:
+        holders: [dm-9]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '671088640'
+        sectorsize: 512
+        size: 320.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-xuwkmlwviyvlurhkmqfiddrwbzpayfzc;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-95825736620844/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030094.57-95825736620844/"
+        > /dev/null 2>&1, SUDO_GID: '25874', SUDO_UID: '25874', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.170, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:1a:f6
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.152, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:40:ca
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetamp005.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetamp005
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk1.vol: {size_g: '919.99', vg: datavg}
+        disk2.vol: {size_g: '100.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '4.00', vg: sysvg}
+        var.vol: {size_g: '4.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '2', num_pvs: '2', size_g: '1019.99'}
+        sysvg: {free_g: '13.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 92
+    ansible_memory_mb:
+      nocache: {free: 6195, used: 1659}
+      real: {free: 92, total: 7854, used: 7762}
+      swap: {cached: 43, free: 3655, total: 4095, used: 440}
+    ansible_memtotal_mb: 7854
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3326345216,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3540848640, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 3510435840, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 1641345024, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 614256640, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3732054016, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445806592,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk1.vol, fstype: ext3, mount: /disk1, options: rw,
+      size_available: 74146742272, size_total: 972334166016, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk2.vol, fstype: ext3, mount: /disk2, options: rw,
+      size_available: 99283947520, size_total: 105689415680, uuid: N/A}
+    ansible_nodename: lhrrhetamp005.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz,
+      GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R)
+        Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680
+        v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 4
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 8
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-42 32 05 72 37 66 72 85-0a 37 09 e5 75 f3 5c 79
+    ansible_product_uuid: 42320572-3766-7285-0A37-09E575F35C79
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 3655
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 38006742
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.170
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.24.171:
+    ansible_all_ipv4_addresses: [10.90.82.153, 10.90.24.171]
+    ansible_all_ipv6_addresses: []
+    ansible_apparmor: {status: disabled}
+    ansible_architecture: x86_64
+    ansible_bios_date: 04/14/2014
+    ansible_bios_version: '6.00'
+    ansible_check_mode: false
+    ansible_cmdline: {crashkernel: 128M@16M, quiet: true, rhgb: true, ro: true, root: /dev/sysvg/root.vol}
+    ansible_date_time: {date: '2017-07-14', day: '14', epoch: '1500030099', hour: '13',
+      iso8601: '2017-07-14T11:01:39Z', iso8601_basic: 20170714T130139%f, iso8601_basic_short: 20170714T130139,
+      iso8601_micro: '2017-07-14T11:01:39.%fZ', minute: '01', month: '07', second: '39',
+      time: '13:01:39', tz: CEST, tz_offset: '+0200', weekday: Friday, weekday_number: '5',
+      weeknumber: '28', year: '2017'}
+    ansible_default_ipv4: {address: 10.90.24.171, alias: eth0, broadcast: 10.90.24.255,
+      gateway: 10.90.24.1, interface: eth0, macaddress: '00:50:56:b2:16:c6', mtu: 1500,
+      netmask: 255.255.255.0, network: 10.90.24.0, type: ether}
+    ansible_default_ipv6: {}
+    ansible_devices:
+      fd0:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8'
+        sectorsize: 512
+        size: 4.00 KB
+        support_discard: null
+        vendor: null
+      hdc:
+        holders: []
+        host: ''
+        model: null
+        partitions: {}
+        removable: '1'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '8388604'
+        sectorsize: 512
+        size: 4.00 GB
+        support_discard: null
+        vendor: null
+      sda:
+        holders: []
+        host: ''
+        model: Virtual disk
+        partitions:
+          sda1:
+            holders: []
+            sectors: '1028097'
+            sectorsize: 512
+            size: 502.00 MB
+            start: '63'
+            uuid: f0949495-8182-4d3d-8dc0-f0dc246dbfe8
+          sda2:
+            holders: [dm-7, dm-6, dm-5, dm-4, dm-3, dm-2, dm-1, dm-0]
+            sectors: '103828095'
+            sectorsize: 512
+            size: 49.51 GB
+            start: '1028160'
+            uuid: null
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '104857600'
+        sectorsize: 512
+        size: 50.00 GB
+        support_discard: null
+        vendor: VMware
+      sdb:
+        holders: [dm-8]
+        host: ''
+        model: Virtual disk
+        partitions: {}
+        removable: '0'
+        rotational: null
+        sas_address: null
+        sas_device_handle: null
+        scheduler_mode: cfq
+        sectors: '209715200'
+        sectorsize: 512
+        size: 100.00 GB
+        support_discard: null
+        vendor: VMware
+    ansible_distribution: RedHat
+    ansible_distribution_major_version: '5'
+    ansible_distribution_release: Tikanga
+    ansible_distribution_version: '5.10'
+    ansible_dns:
+      nameservers: [10.90.40.11, 10.90.40.12]
+      search: [enterprisenet.org]
+    ansible_domain: enterprisenet.org
+    ansible_effective_group_id: 0
+    ansible_effective_user_id: 0
+    ansible_env: {HOME: /root, LANG: en_US.utf8, LOGNAME: root, MAIL: /var/mail/ansibleitamdevops,
+      PATH: '/usr/bin:/bin', PWD: /home/ansibleitamdevops, SHELL: /bin/bash, SHLVL: '1',
+      SUDO_COMMAND: /bin/sh -c echo BECOME-SUCCESS-kfkdejgqjdcrwbjlerwnzygwtcbnidqs;
+        /usr/bin/python /home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030097.58-47672730198389/setup.py;
+        rm -rf "/home/ansibleitamdevops/.ansible/tmp/ansible-tmp-1500030097.58-47672730198389/"
+        > /dev/null 2>&1, SUDO_GID: '25917', SUDO_UID: '25917', SUDO_USER: ansibleitamdevops,
+      TERM: xterm, USER: root, USERNAME: root, _: /usr/bin/python}
+    ansible_eth0:
+      active: true
+      device: eth0
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.24.171, broadcast: 10.90.24.255, netmask: 255.255.255.0,
+        network: 10.90.24.0}
+      macaddress: 00:50:56:b2:16:c6
+      module: vmxnet3
+      mtu: 1500
+      pciid: '0000:03:00.0'
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_eth1:
+      active: true
+      device: eth1
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'on', scatter_gather: 'on', tcp segmentation offload: 'on',
+        tx_checksumming: 'on', udp fragmentation offload: 'off'}
+      ipv4: {address: 10.90.82.153, broadcast: 10.90.95.255, netmask: 255.255.240.0,
+        network: 10.90.80.0}
+      macaddress: 00:50:56:b2:7c:3b
+      module: vmxnet3
+      mtu: 1500
+      pciid: 0000:0b:00.0
+      promisc: false
+      speed: 10000
+      type: ether
+    ansible_fips: false
+    ansible_form_factor: Other
+    ansible_fqdn: lhrrhetami001.enterprisenet.org
+    ansible_gather_subset: [hardware, virtual, network]
+    ansible_hostname: lhrrhetami001
+    ansible_interfaces: [lo, eth1, eth0]
+    ansible_kernel: 2.6.18-371.el5
+    ansible_lo:
+      active: true
+      device: lo
+      features: {generic segmentation offload: 'off', generic_receive_offload: 'off',
+        rx_checksumming: 'off', scatter_gather: 'off', tcp segmentation offload: 'off',
+        tx_checksumming: 'off', udp fragmentation offload: 'off'}
+      ipv4: {address: 127.0.0.1, broadcast: host, netmask: 255.0.0.0, network: 127.0.0.0}
+      mtu: 16436
+      promisc: false
+      type: loopback
+    ansible_lsb: {codename: Tikanga, description: Red Hat Enterprise Linux Server
+        release 5.10 (Tikanga), id: RedHatEnterpriseServer, major_release: '5', release: '5.10'}
+    ansible_lvm:
+      lvs:
+        disk.vol: {size_g: '100.00', vg: datavg}
+        home.vol: {size_g: '2.00', vg: sysvg}
+        opt.vol: {size_g: '4.00', vg: sysvg}
+        root.vol: {size_g: '4.00', vg: sysvg}
+        swap.vol: {size_g: '4.00', vg: sysvg}
+        tmp.vol: {size_g: '4.00', vg: sysvg}
+        usr.vol: {size_g: '6.00', vg: sysvg}
+        var.vol: {size_g: '9.00', vg: sysvg}
+        varcrash.vol: {size_g: '10.00', vg: sysvg}
+      vgs:
+        datavg: {free_g: '0', num_lvs: '1', num_pvs: '1', size_g: '100.00'}
+        sysvg: {free_g: '6.50', num_lvs: '8', num_pvs: '1', size_g: '49.50'}
+    ansible_machine: x86_64
+    ansible_machine_id: 0cbc132d6ec2ecda6776cd00549aa5e6
+    ansible_memfree_mb: 126
+    ansible_memory_mb:
+      nocache: {free: 4120, used: 3734}
+      real: {free: 126, total: 7854, used: 7728}
+      swap: {cached: 39, free: 3699, total: 4095, used: 396}
+    ansible_memtotal_mb: 7854
+    ansible_mounts:
+    - {device: /dev/mapper/sysvg-root.vol, fstype: ext3, mount: /, options: rw, size_available: 3090219008,
+      size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-opt.vol, fstype: ext3, mount: /opt, options: rw,
+      size_available: 3543257088, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/mapper/sysvg-var.vol, fstype: ext3, mount: /var, options: rw,
+      size_available: 7009947648, size_total: 9361022976, uuid: N/A}
+    - {device: /dev/mapper/sysvg-home.vol, fstype: ext3, mount: /home, options: rw,
+      size_available: 698462208, size_total: 2080194560, uuid: N/A}
+    - {device: /dev/mapper/sysvg-usr.vol, fstype: ext3, mount: /usr, options: rw,
+      size_available: 1704017920, size_total: 6240665600, uuid: N/A}
+    - {device: /dev/mapper/sysvg-tmp.vol, fstype: ext3, mount: /tmp, options: rw,
+      size_available: 3732008960, size_total: 4160421888, uuid: N/A}
+    - {device: /dev/sda1, fstype: ext3, mount: /boot, options: rw, size_available: 445805568,
+      size_total: 509776896, uuid: N/A}
+    - {device: /dev/mapper/sysvg-varcrash.vol, fstype: ext3, mount: /var/crash, options: rw,
+      size_available: 9874108416, size_total: 10568916992, uuid: N/A}
+    - {device: /dev/mapper/datavg-disk.vol, fstype: ext3, mount: /disk, options: rw,
+      size_available: 7987499008, size_total: 105685221376, uuid: N/A}
+    ansible_nodename: lhrrhetami001.enterprisenet.org
+    ansible_os_family: RedHat
+    ansible_pkg_mgr: yum
+    ansible_playbook_python: /usr/bin/python2
+    ansible_processor: [GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel,
+      Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU
+        E5-2680 v2 @ 2.80GHz, GenuineIntel, Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz]
+    ansible_processor_cores: 2
+    ansible_processor_count: 2
+    ansible_processor_threads_per_core: 1
+    ansible_processor_vcpus: 4
+    ansible_product_name: VMware Virtual Platform
+    ansible_product_serial: VMware-56 4d c5 60 4b a6 5f 59-48 aa b0 df 91 e9 8f 2b
+    ansible_product_uuid: 564DC560-4BA6-5F59-48AA-B0DF91E98F2B
+    ansible_product_version: None
+    ansible_python:
+      executable: /usr/bin/python
+      has_sslcontext: false
+      type: null
+      version: {major: 2, micro: 3, minor: 4, releaselevel: final, serial: 0}
+      version_info: [2, 4, 3, final, 0]
+    ansible_python_version: 2.4.3
+    ansible_real_group_id: 0
+    ansible_real_user_id: 0
+    ansible_selinux: {status: disabled}
+    ansible_service_mgr: sysvinit
+    ansible_ssh_host_key_dsa_public: AAAAB3NzaC1kc3MAAACBAPpGNjEvrNNALYiq1z2x8GatNEVsJBm6uzyKvySGVLxgsdj76EA2BjplNletxnGWwoA2cDjYnNeA3LVwFxqBiZlhwABsWd9803lCwaYqK70jsEgTvGk0ftz9b6R5jRca13wBtZQBjvIYoohg9ub8P/WRQ5gZJt0h1abxaOvhnbk5AAAAFQCGNy/wyN6rvVdAT0FbIV58E+tmWwAAAIA2ZzPdElVWODtBMoofBE7ONQOSLeQcRxpb0QTa6WJlrlUpFN+ZgGDPyZYf4fr2hIuWE6CYpUIAy5ChR9etK0gFFawGkwbrwt+BjL27GtTaz7iVEjqaB2rNcxkYZMLcEFONIfdkPsFkBtudEud7exC+fm1VcLlT9mdshJ6gr/G6JQAAAIEA9hIHNyv+E/Zl4JzadnSaUsfUQ+KaJ8puwxh+bMmIGNwdUBOtyvAsjVa21LyMSFm9w+Xm3YeQtE9zDsZsSN6USiar1RMH762JTRGig1TOq6q9FkHqPObRbg2dcHnLZOU6v3K8RMMSlGd1xA3YF+qSnNJJzq/YSjvRrjUcBuGWoQI=
+    ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAABIwAAAQEAzwIz2PJxkd4KJf2dTePVBqQCzAyehaQxtRnQZgaobgabuGc0P/qrc0T9rdXSDkTXt1L4iaEeGhiBsJdSb46dRtPnE7PMy7GrPz2o1swqxFo14+YcRLUN3Vk45luqAeyUJ3AzfRxPAfDnpfzeswCtiKUEDfPfxmiIC1yfACZnoeVHvGqIyASKe6QrOG3roH+gEYAXq+cSq9bHNkJ7mzfCyJoMYQo8qcOpddpd2KgIkd0wN2xQcrUi6P/3yum/pfBNNSJTW61NohqFUEHdXORSk2oqI9JMFh4bja09BBcC3mmMayx4mmKineHcEAggA9M4KvJ+oEGTM7nXDIjaOCU8rw==
+    ansible_swapfree_mb: 3699
+    ansible_swaptotal_mb: 4095
+    ansible_system: Linux
+    ansible_system_vendor: VMware, Inc.
+    ansible_uptime_seconds: 38006746
+    ansible_user_dir: /root
+    ansible_user_gecos: root
+    ansible_user_gid: 0
+    ansible_user_id: root
+    ansible_user_shell: /bin/bash
+    ansible_user_uid: 0
+    ansible_userspace_architecture: x86_64
+    ansible_userspace_bits: '64'
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    ansible_virtualization_role: NA
+    ansible_virtualization_type: NA
+    group_names: [croatia]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.24.171
+    inventory_hostname_short: '10'
+    module_setup: true
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.40:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.40
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.42:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.42
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.43:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.43
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.44:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.44
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.45:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.45
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.49:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.49
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.50:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.50
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.51:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.51
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.52:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.52
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.53:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.53
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.55:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [sweden]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.55
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+  10.90.25.56:
+    ansible_check_mode: false
+    ansible_playbook_python: /usr/bin/python2
+    ansible_version: {full: 2.3.1.0, major: 2, minor: 3, revision: 1, string: 2.3.1.0}
+    group_names: [poland]
+    groups: *id001
+    inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+    inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+    inventory_hostname: 10.90.25.56
+    inventory_hostname_short: '10'
+    omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+    playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+inventory_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+inventory_file: /home/guagga01/Desktop/various-tools/ansible/collect/inventory
+inventory_hostname: 10.90.24.168
+inventory_hostname_short: '10'
+module_setup: true
+omit: __omit_place_holder__0da1bb3ae6d76659671602078d1eb7b4d3f15374
+play_hosts: *id002
+playbook_dir: /home/guagga01/Desktop/various-tools/ansible/collect
+role_names: []

@@ -1,9 +1,0 @@
----
-- name: "Install POLLUX-RPD on server "
-  hosts: all
-  remote_user: ansibleitamdevops
-  become: true
-  become_method: sudo
-  become_user: root
-  roles:
-    - pollux-rpd

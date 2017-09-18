@@ -1,5 +1,0 @@
----
-# tasks file for pollux-survey
-- name: 'Install Pollux Survey'
-  yum: name=pollux-survey state=present
-

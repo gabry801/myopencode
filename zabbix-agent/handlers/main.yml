@@ -1,7 +1,0 @@
----
-# handlers file for zabbix-agent
-- name: start zabbix-agent
-  service: name=zabbix-agent state=started enabled=yes
-
-- name: restart zabbix-agent
-  service: name=zabbix-agent state=restarted enabled=yes

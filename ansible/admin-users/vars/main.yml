@@ -1,5 +1,0 @@
----
-# vars file for test-user
-user_password:
-  - dummy
-

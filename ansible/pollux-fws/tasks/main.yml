@@ -1,8 +1,0 @@
----
-# tasks file for pollux-fws
-- name: 'Installing Pollux FWS on server'
-  yum: name=pollux-fws state=present
-
-- name: 'Add other eventual step'
-  shell: echo "In the future will be the configuration...." 
-

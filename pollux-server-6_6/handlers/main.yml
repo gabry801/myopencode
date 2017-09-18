@@ -1,7 +1,0 @@
----
-# handlers file for pollux-server-7_0
-- name: restart proftpd 
-  service: name=proftpd state=restarted enabled=yes
-
-- name: restart pollux-server
-  service: name=pollux-server state=restarted enabled=yes

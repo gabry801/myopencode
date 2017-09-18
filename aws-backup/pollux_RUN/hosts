@@ -1,8 +1,0 @@
-[polluxfts2-servers]
-#10.95.139.10  country="macedonia"
-192.168.56.101  country="macedonia" country_code="MK"
-[polluxfts3-servers]
-#
-[polluxcs6-servers]
-#
-[polluxcs8-servers]

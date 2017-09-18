@@ -1,7 +1,0 @@
----
-# tasks file for polluxfts
-- name: 'Install PolluxFTS '
-  yum:
-    name: pollux-fts
-    state: present
-

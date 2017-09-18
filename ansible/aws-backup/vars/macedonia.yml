@@ -1,8 +1,0 @@
----
-# vars file for aws-backup
-aws_access_key_id: 'AKIAIIYC5F22FWRO7C6A'
-aws_secret_access_key: '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'
-bucket_name: "eu-west-1-nlsn-w-itam-pollux-mk-prod" 
-aws_region: "eu-west-1" 
-duply_profile: "polluxfts" 
-dir_on_bucket: "{{ ansible_hostname }}"

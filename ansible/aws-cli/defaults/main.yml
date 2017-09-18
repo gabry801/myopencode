@@ -1,8 +1,0 @@
----
-aws_cli_user: '{{ ansible_ssh_user }}'
-#aws_cli_user: 'root'
-aws_output_format: 'json'
-aws_region: ' {{ aws_region }} '
-aws_access_key_id: 'AKIAI2RAAOULF4PBYAIA'
-aws_secret_access_key: '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'
-
